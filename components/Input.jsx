@@ -25,7 +25,7 @@ export default function Input() {
         <div className="flex justify-between items-center pt-2.5">
           <div className="flex">
             <PhotoIcon className="h-9 hoverEffect p-2 text-[#1d9bf0] hover:bg-sky-100" />
-            <FaceSmileIcon className="h-9 hoverEffect p-2 " />
+            <FaceSmileIcon className="h-9 hoverEffect p-2 text-[#1d9bf0] hover:bg-sky-100" />
           </div>
           <button className="px-4 py-1.5 text-white bg-[#1d9bf0] rounded-full font-bold hover:brightness-95 shadow-md disabled:opacity-50 cursor-pointer">
             Tweet
