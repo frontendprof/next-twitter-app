@@ -41,7 +41,7 @@ export default function Post({ post }) {
         <Image
           src={post.img}
           width="450"
-          height="450"
+          height="500"
           alt={post.imgAlt}
           className="rounded-2xl mr-2"
         ></Image>

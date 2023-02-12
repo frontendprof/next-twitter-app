@@ -3,7 +3,7 @@ import Feed from '../components/Feed';
 import Sidebar from '../components/Sidebar';
 import Widgets from '../components/Widgets';
 
-export default function Home({ newsRes }) {
+export default function Home({ newsRes, randomUsers }) {
   return (
     <div>
       <Head>
@@ -20,7 +20,7 @@ export default function Home({ newsRes }) {
         <Feed />
 
         {/* Widgets */}
-        <Widgets newsRes={newsRes.articles} />
+        <Widgets newsRes={newsRes.articles} randomUsers={randomUsers.results} />
 
         {/* Modal */}
       </main>
@@ -33,9 +33,14 @@ export async function getServerSideProps() {
     'https://saurav.tech/NewsAPI/top-headlines/category/business/us.json'
   ).then((res) => res.json());
 
+  const randomUsers = await fetch(
+    'https://randomuser.me/api/?results=50&inc=name,login,picture'
+  ).then((res) => res.json());
+
   return {
     props: {
       newsRes,
+      randomUsers,
     },
   };
 }

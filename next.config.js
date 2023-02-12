@@ -7,6 +7,7 @@ const nextConfig = {
       'res.cloudinary.com',
       'images.unsplash.com',
       'cyberweb8.github.io',
+      'randomuser.me',
     ],
   },
 };
